@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<h1></h1>
+<title>PORTAL COVID-19</title>
+</h:head>
+<h:body>
+			<h1>PORTAL COVID-19</h1>
+			<h:outputText value="NoticiaBean teste" /><br/>
+			~~~~~~~~~~~~<br/>
+	<h:outputText value="Titulo " />
+	<h:inputText value="" /><br/>
+	<h:outputText value="Conteudo " />
+	<h:inputText value="" /><br/>
+	<h:outputText value="Autor " />
+	<h:inputText value="" /><br/>
+	<h:outputText value="Data de Criacao " />
+	<h:inputText value="" /><br/>
+		<h:outputText value="Data de Alteração " />
+	<h:inputText value="" /><br/>
+	
+	<h:commandButton value="Submit" action="#{noticiaDao.getList}" method="POST" /><br/>
+	
+	
+	<h:outputText value="#{noticia.autordanoticia}" /><br/>
+	<h:outputText action="#{noticia.getConteudodanoticia}" /><br/>
+<br/>
+<br/>	
+	----------------------
+	
+	<h:outputText value="Teste" action="#{noticia.getAutordanoticia}" /><br/>
+	<h:outputText value="Teste2" action="#{noticiaDao.adiciona}" /><br/>
+	
+	<br/>
+<br/>	
+	
+	
+	
+	
+	
+	
+	
+	
+	//consulta	
+	 <f:view>
+        <h:form id="form1">
+            <h:panelGrid columns="3">
+                <f:facet name="header">
+                <h:outputText value="::Consultar Clientes"/>
+                </f:facet>
+                <h:dataTable/>
+                <h:outputText    />
+                
+            </h:panelGrid>
+            <h:commandButton value="Consultar" action="#{noticiaDao.getList}" />
+            
+            <h:commandButton value="Limpar" type="reset" />
+            
+            <h:dataTable  value="Consultar" method="Listar" /><br/>
+            
+            
+
+<!-- 			<h:commandLink value="Cancelar" action="cancelar" immediate="sucess.xhtml"/> -->
+
+
+
+
+
+
+        </h:form>
+        </f:view>
+	
+
+</h:body>
+</html>
